@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your Site Name</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="wrap">
+    <h1>Your Site Name</h1>
+    <p class="tagline">A short sentence explaining what this site is about.</p>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <h2>Welcome</h2>
+      <p>
+        This is your website. You can talk about what you do, what you make,
+        or why this site exists.
+      </p>
+    </section>
+
+    <section>
+      <h2>About</h2>
+      <p>
+        A few sentences about you or your project.
+      </p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <small>© <span id="y"></span> Your Name</small>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
