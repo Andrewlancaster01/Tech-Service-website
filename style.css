@@ -23,6 +23,9 @@ body{
   line-height:1.55;
 }
 
+/* Consistent left alignment */
+.card, .hero-copy, .hero-card, .section, .section.alt { text-align: left; }
+
 a{ color:inherit; text-decoration:none; }
 a:hover{ opacity:.92; }
 
@@ -45,7 +48,7 @@ a:hover{ opacity:.92; }
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding: 14px 20px;
+  padding: 14px 0;
 }
 
 .brand{
@@ -156,28 +159,36 @@ h1{
   border-bottom: 1px solid var(--line);
 }
 
+/* Fix the “staggered” heading alignment by stacking the section title + text */
 .section-head{
   display:flex;
-  align-items:flex-end;
-  justify-content:space-between;
-  gap:18px;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content:flex-start;
+  gap:10px;
   margin-bottom: 22px;
+  text-align:left;
+  max-width: 70ch;
 }
 .section-head h2{
   margin:0;
   font-size: 28px;
   letter-spacing: -.2px;
 }
+
 .muted{ color: var(--muted); }
 .tiny{ font-size: 13px; }
 
 .grid{
   display:grid;
   gap: 16px;
+  align-items: stretch;
 }
+
 .cards{
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+
 .mini{
   display:grid;
   grid-template-columns: repeat(2, minmax(0,1fr));
@@ -188,9 +199,9 @@ h1{
 .card{
   background: rgba(255,255,255,.04);
   border: 1px solid var(--line);
-  border-radius: 18px;
+  border-radius: var(--radius);
   padding: 18px;
-  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+  box-shadow: var(--shadow);
 }
 
 .hero-card .card{
@@ -222,6 +233,7 @@ h1{
   display:grid;
   grid-template-columns: repeat(3, minmax(0,1fr));
   gap: 16px;
+  align-items: stretch;
 }
 .step-num{
   width: 34px;
